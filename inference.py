@@ -20,8 +20,6 @@ def correlation(data, get_p_value=False, signed=1 ):
     for i in range(data.shape[0]):
         for j in range(i+1,data.shape[0]):
             cor, p_value = scipy.stats.pearsonr(data[i,:],data[j,:])
-            # dot product in numerator, euclidian norm in denomenator
-
 
             if signed:
                 edges[i,j] = cor
