@@ -22,7 +22,7 @@ for i in range(1,num_samps+1):
     samps.append(f"sample{i}")
 
 
-## expression data, rows are genes and columsn are samples
+## expression data, rows are genes and columns are samples
 data = np.random.rand(num_genes,num_samps)
 
 
@@ -49,6 +49,7 @@ data = np.random.rand(num_genes,num_samps)
 
 
 ### testing linear regression
+
 # edges = inference.linear_regression(data)
 # print(edges)
 # print(edges.shape)
