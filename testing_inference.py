@@ -46,3 +46,10 @@ data = np.random.rand(num_genes,num_samps)
 # [edges,p_values] = inference.correlation(data,get_p_value=True)
 # print(p_values)
 # print(p_values.shape)
+
+
+### testing linear regression
+
+edges = inference.linear_regression(data)
+print(edges)
+print(edges.shape)
