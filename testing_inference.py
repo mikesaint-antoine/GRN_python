@@ -1,4 +1,5 @@
 import numpy as np
+import inference
 
 
 
@@ -26,3 +27,16 @@ data = np.random.rand(num_genes,num_samps)
 
 
 
+
+
+
+
+
+
+### testing correlation
+
+edges = inference.correlation(data)
+
+print(edges)
+print(type(edges))
+print(edges.shape)
