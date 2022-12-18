@@ -49,7 +49,14 @@ data = np.random.rand(num_genes,num_samps)
 
 
 ### testing linear regression
+# edges = inference.linear_regression(data)
+# print(edges)
+# print(edges.shape)
 
+
+
+
+## testing output writing
 edges = inference.linear_regression(data)
-print(edges)
-print(edges.shape)
+inference.write_output(genes,edges,filename="test_output/test.csv")
+inference.write_output(genes,edges,filename="test_output/test.tsv",filetype="tsv")

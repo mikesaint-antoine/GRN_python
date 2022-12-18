@@ -1,6 +1,6 @@
 import numpy as np
 import scipy.stats
-
+import sys
 
 
 
@@ -68,6 +68,42 @@ def linear_regression(data, get_p_value=False, get_signs=False ):
                 edges[i,j] = r_sq
 
 
-
-
     return(edges)
+
+
+
+
+def write_output(genes, edges, filename="output.csv",filetype="csv"):
+    ## default is CSV
+    
+    from operator import itemgetter
+
+
+    to_write = []
+
+    for i in range(edges.shape[0]):
+        for j in range(edges.shape[1]):
+            if i != j:
+                to_write.append([genes[i],genes[j],edges[i,j]])
+
+
+
+    to_write = sorted(to_write, key=itemgetter(2), reverse=True)
+
+
+    if filetype=="csv":
+
+        with open(filename, "w") as record_file:
+            for i in range(len(to_write)):
+
+                record_file.write(f"{to_write[i][0]},{to_write[i][1]},{to_write[i][2]}\n")
+
+    elif filetype=="tsv":
+
+        with open(filename, "w") as record_file:
+            for i in range(len(to_write)):
+
+                record_file.write(f"{to_write[i][0]}\t{to_write[i][1]}\t{to_write[i][2]}\n")
+
+
+    
