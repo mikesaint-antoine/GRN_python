@@ -287,3 +287,12 @@ def hill_repression_ssa(get_info=0,tend=1000, params=[1, 0.2, 1, 0.2, 1, 9],init
 
 
     return([G1,G2,t])
+
+
+
+
+
+
+
+
+
