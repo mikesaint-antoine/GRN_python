@@ -23,7 +23,8 @@ import sys
 
 
 ## HILL ACTIVATION SSA
-[G1,G2,t] = simulation.hill_activation_ssa(tend=50,plot_fig=1)
+# [G1,G2,t] = simulation.hill_activation_ssa(tend=50,plot_fig=1)
 
 
-
+## HILL REPRESSION SSA
+[G1,G2,t] = simulation.hill_activation_ssa(tend=100,plot_fig=1,init=[0,20])
