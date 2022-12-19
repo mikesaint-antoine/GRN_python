@@ -4,16 +4,9 @@ import matplotlib.pyplot as plt
 import sys
 
 
-
-
-
-[G1,G2,t] = simulation.toggle_switch_ssa(plot_fig=1)
-
-
-print(len(G1))
-print(len(G2))
-print(len(t))
-
+## TOGGLE SWITCH SSA
+# simulation.toggle_switch_ssa(get_info=1)
+# [G1,G2,t] = simulation.toggle_switch_ssa(plot_fig=1)
 
 # f, (ax1, ax2) = plt.subplots(2, sharex=True, sharey=False)
 # line1, = ax1.plot(t , G1, color="b",label="G1")
@@ -23,3 +16,14 @@ print(len(t))
 
 # ax2.set_xlabel('Time')
 # plt.show()
+
+
+
+
+
+
+## HILL ACTIVATION SSA
+[G1,G2,t] = simulation.hill_activation_ssa(tend=50,plot_fig=1)
+
+
+
