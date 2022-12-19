@@ -7,7 +7,7 @@ import sys
 
 
 
-[G1,G2,t] = simulation.sim_toggle_switch(plot_fig=1)
+[G1,G2,t] = simulation.toggle_switch_ssa(plot_fig=1)
 
 
 print(len(G1))

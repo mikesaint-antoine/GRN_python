@@ -5,7 +5,7 @@ import sys
 
 
 
-def sim_toggle_switch(tend=1000, params=[1, 0.2, 1, 0.2, 1, 9],init=[0,0],plot_fig=0):
+def toggle_switch_ssa(tend=1000, params=[1, 0.2, 1, 0.2, 1, 9],init=[0,0],plot_fig=0):
 
     # params: [k_1, gamma_1, k_2, gamma_2, c, h]
 
